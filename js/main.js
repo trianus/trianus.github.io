@@ -63,7 +63,7 @@ function Load_Posts_By_Group_Id() {
             if (!res.paging || !res.paging.next) Load_Posts_By_Group_Id();
             else DataRequest(res.paging.next, proc);
         }
-    FB_Data_Request(FB_Fetch_Group_Id, "feed", "from,message,full_picture&limit=100", proc);
+    FB_Data_Request(FB_Fetch_Group_Id, "feed", "from,message,full_picture&limit=50", proc);
 }
 function Story_FlowType(index) {
     var Story = Libary.all[index],
